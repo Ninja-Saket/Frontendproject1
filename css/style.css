@@ -167,6 +167,104 @@ section {
   text-align: center;
 }
 
+.about {
+  background: url(../images/about-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 3rem;
+}
+
+.about .column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about .column .image {
+  flex: 1 1 40rem;
+}
+
+.about .column .image img {
+  width: 100%;
+}
+
+.about .column .content {
+  flex: 1 1 40rem;
+}
+
+.about .column .content h3 {
+  font-size: 3rem;
+  color: #666;
+}
+
+.about .column .content p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+.about .column .content .buttons a:last-child {
+  margin-left: 2rem;
+}
+
+.newsletter {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: url(../images/subscribe-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.newsletter h3 {
+  font-size: 3rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.newsletter p {
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 2rem auto;
+  width: 70rem;
+}
+
+.newsletter form {
+  display: flex;
+  /* justify-content: center; */
+  max-width: 70rem;
+  border: 0.2rem solid #fff;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  height: 5.5rem;
+}
+
+.newsletter form input[type="email"] {
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+  padding: 0 2rem;
+  width: 100%;
+  text-transform: none;
+}
+
+.newsletter form input[type="email"]::placeholder {
+  text-transform: capitalize;
+  color: #eee;
+}
+
+.newsletter form input[type="submit"] {
+  background: #fff;
+  width: 20rem;
+  border-radius: 5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.newsletter form input[type="submit"]:hover {
+  color: var(--pink);
+}
 @media (max-width: 1200px) {
   html {
     font-size: 50%;
@@ -231,10 +329,26 @@ section {
   .home .content p {
     font-size: 1.6rem;
   }
+
+  .about {
+    background-position: right;
+  }
+
+  .newsletter p {
+    width: auto;
+  }
 }
 
-/* @media (max-width: 450px) {
+@media (max-width: 450px) {
   html {
     font-size: 50%;
   }
-} */
+
+  .about .column .content .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+  .about .column .content .buttons a:last-child {
+    margin: 1rem 0;
+  }
+}
