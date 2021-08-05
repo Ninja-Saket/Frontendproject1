@@ -76,7 +76,7 @@ header label {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 9%;
   padding-top: 8rem;
 }
@@ -112,6 +112,17 @@ section {
   animation: float 3s linear infinite;
 }
 
+.heading {
+  text-align: center;
+  background: var(--gradient);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
 @keyframes float {
   0%,
   100% {
@@ -136,6 +147,24 @@ section {
 .home .content p {
   font-size: 1.7rem;
   padding: 1rem 0;
+}
+
+.features .box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.features .box-container .box {
+  flex: 1 1 30rem; /*grow shrink basis*/
+  background: #fff;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin: 1.5rem;
+  padding: 3rem 2rem;
+  text-align: center;
 }
 
 @media (max-width: 1200px) {
@@ -204,8 +233,8 @@ section {
   }
 }
 
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
   html {
     font-size: 50%;
   }
-}
+} */
